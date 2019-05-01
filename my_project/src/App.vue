@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="container">
 
         <router-view/>
     </div>
@@ -28,6 +28,11 @@
         text-decoration: none;
     }
 
+
+    .container{
+        width: 900px;
+        margin:30px auto;
+    }
 
 
 </style>

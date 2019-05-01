@@ -1,6 +1,7 @@
 <template>
- <div>
-     <router-link to="/todolist"> todolist</router-link>
+ <div >
+     <router-link tag="a" to="/todolist"> todolist</router-link>
+     <router-link  tag="a" to="/xiaoshuo"> xiaoshuo</router-link>
  </div>
 </template>
 
@@ -17,18 +18,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+
+
+a{    padding: 10px;
+      color: #333;
+      font-size: 18px;
+      text-align: center;
+    background: aliceblue;
+    margin: 10px 30px;
+  }
+a:hover{
+    color: #fff;
+    background-color: #f40;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+
+</style>å

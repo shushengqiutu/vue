@@ -9,7 +9,6 @@
            <todolistItem :data="list" @changeselect="changeSelect"></todolistItem>
        </ul>
 
-       {{this.list}}
    </div>
 </template>
 
@@ -45,8 +44,9 @@
             }
         },
         props:["listTest"],
-        mounted(){
-            this.list = this.listTest;
+        created(){
+            this.list = this.listTest ;
+
         },
         methods:{
             changeSelect:function (item) {

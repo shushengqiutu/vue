@@ -18,17 +18,20 @@
             return {
                 placeholder:"请输入你要添加的任务",
                 inputValue:'',
-                msg:[
-                    {text:'111',createAt:'2019-04-25',status:1},
-                    {text:'222',createAt:'2019-04-25',status:0},
-                    {text:'333',createAt:'2019-04-25',status:1},
-                    //   {text:'222',createAt:'2019-04-25',status:1},
-
-                ]
+                msg:[]
             }
         },
         components:{
             'v-body':body
+        },
+        created(){
+            var data = localStorage.getItem('item');
+            if (data && JSON.parse(data)){
+                this.msg = JSON.parse(data)
+            }
+        },
+        mounted(){
+
         },
         methods:{
             inputEnd:function () {
@@ -40,8 +43,9 @@
                     createAt: this.formatTime(oDate),
                     status:0
                 });
-                this.inputValue=""
 
+                this.inputValue="";
+                localStorage.setItem('item',JSON.stringify(this.msg));
             },
             formatTime:function (time) {
                 var y = time.getFullYear();
@@ -76,7 +80,7 @@
                var index= this.msg.indexOf(val)
 
                  this.msg[index].status = (this.msg[index].status ===0?1:0)
-
+                 localStorage.setItem('item',JSON.stringify(this.msg));
 
             }
 
