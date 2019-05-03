@@ -9,8 +9,8 @@
 
         <h2>xxx小说网</h2>
            <ul>
-               <router-link tag="li" :to="{name:'Info',query:{id:0}}"
-               v-for="item in list">
+               <router-link :key="index" tag="li" :to="{name:'Info',query:{id:0}}"
+               v-for="(item,index) in list">
                    <div class="left"><img :src="item.image" alt=""></div>
                    <div class="right">
                        <h2> {{item.name}}</h2>

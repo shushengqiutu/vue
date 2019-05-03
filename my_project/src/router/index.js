@@ -4,12 +4,14 @@ import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/todolist/home'
 import Xiaoshuo from '@/components/xiaoshuo/xiaoshuo'
 import Info from '@/components/xiaoshuo/info'
+import Vuex1 from '@/components/vuex/Vuex'
 
 Vue.use(Router)
 
 export default new Router({
   routes:
       [
+
     {
       path: '/',
       name: 'HelloWorld',
@@ -29,6 +31,13 @@ export default new Router({
           path:"/info",
           name:'Info',
           component:Info
+      },
+      {
+          path:"/vuex",
+          name:'vuex',
+          component:Vuex1
       }
+
+
   ]
 })

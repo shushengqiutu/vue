@@ -1,5 +1,7 @@
 <template>
     <div >
+
+        {{ this.$store.state.num}}条未读消息
             <div v-if="loading">
                 <v-loading></v-loading>
             </div>

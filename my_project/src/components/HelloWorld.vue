@@ -2,6 +2,7 @@
  <div >
      <router-link tag="a" to="/todolist"> todolist</router-link>
      <router-link  tag="a" to="/xiaoshuo"> xiaoshuo</router-link>
+     <router-link  tag="a" to="/vuex"> vuexdemo</router-link>
  </div>
 </template>
 

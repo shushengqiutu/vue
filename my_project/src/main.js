@@ -4,7 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import  axios from 'axios'
-Vue.prototype.$ajax=axios
+import  store from "./store/store"
+
+
+console.log(store);
+
+Vue.prototype.$ajax= axios
 
 
 Vue.config.productionTip = false
@@ -13,6 +18,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
